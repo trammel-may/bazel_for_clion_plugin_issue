@@ -1,0 +1,13 @@
+.bazelisk
+.github
+.husky
+.idea
+.ijwb
+.jetbrains
+docs
+node_modules
+tools/eslint/node_modules
+tools/style/guide/node_modules
+third_party/
+venv
+.temp

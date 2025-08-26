@@ -1,0 +1,34 @@
+load("//tools/bazel:rules.bzl", "cc_library", "objc_library")
+
+package(default_visibility = ["//packages"])
+
+cc_library(
+    name = "frontend_headers",
+    srcs = glob(
+        include = ["*.hpp"],
+    ),
+    hdrs = glob(
+        include = ["*.hpp"],
+    ),
+)
+
+objc_library(
+    name = "lib",
+    srcs = glob(
+        include = ["*.mm"],
+    ),
+    copts = ["-fobjc-arc"],
+    data = ["Shaders.metal"],
+    sdk_frameworks = [
+        "Cocoa",
+        "Metal",
+        "MetalKit",
+        "QuartzCore",
+        "Foundation",
+        "CoreText",
+        "CoreGraphics",
+    ],
+    deps = [
+        ":frontend_headers",
+    ],
+)

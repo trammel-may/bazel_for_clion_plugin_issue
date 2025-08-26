@@ -1,0 +1,9 @@
+node_modules
+.clwb
+.ijwb
+.DS_Store
+bazel-*
+*.iml
+yarn-error.log
+venv
+.temp

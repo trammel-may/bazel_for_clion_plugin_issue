@@ -1,0 +1,8 @@
+load("//tools/bazel:rules.bzl", "cc_library")
+
+package_group(
+    name = "packages",
+    packages = [
+        "//packages/...",
+    ],
+)

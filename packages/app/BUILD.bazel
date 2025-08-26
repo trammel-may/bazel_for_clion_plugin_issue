@@ -1,0 +1,9 @@
+load("//tools/bazel:rules.bzl", "cc_library")
+
+cc_binary(
+    name = "app",
+    srcs = ["main.cpp"],  # main is in App.mm inside objc_glue
+    deps = [
+        "//packages/lib",
+    ],
+)
